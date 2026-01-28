@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Attendance Tractor — Smart attendance for schools</title>
+		<meta name="description" content="Attendance Tractor — fast, reliable attendance tracking for teachers and administrators." />
+		<style>
+			:root{--accent:#2b8cff;--muted:#6b7280;--bg:#f7fafc}
+			*{box-sizing:border-box}
+			body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;color:#0f172a;background:var(--bg)}
+			.container{max-width:1100px;margin:0 auto;padding:40px 20px}
+			header{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+			.brand{display:flex;gap:12px;align-items:center}
+			.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+			h1{font-size:28px;margin:0}
+			p.lead{color:var(--muted);margin:8px 0 0}
+			.hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:36px;background:white;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+			.hero .cta{margin-top:18px}
+			.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+			.btn-primary{background:var(--accent);color:#fff}
+			.btn-outline{border:1px solid #e6eefc;color:var(--accent);background:transparent}
+			.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+			.card{background:white;padding:18px;border-radius:10px;box-shadow:0 6px 12px rgba(15,23,42,0.04)}
+			footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+			@media (max-width:880px){.hero{grid-template-columns:1fr;}.container{padding:20px}}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="brand">
+					<div class="logo">AT</div>
+					<div>
+						<div style="font-weight:700">Attendance Tractor</div>
+						<div style="font-size:12px;color:var(--muted)">Fast. Simple. Reliable.</div>
+					</div>
+				</div>
+				<nav>
+					<a class="btn btn-outline" href="/login">Sign in</a>
+					<a class="btn btn-primary" href="/signup" style="margin-left:10px">Get started</a>
+				</nav>
+			</header>
+
+			<main class="hero">
+				<section>
+					<h1>Automate attendance, save time, and improve accuracy</h1>
+					<p class="lead">Attendance Tractor helps teachers and administrators record and monitor attendance quickly with a clean dashboard, reports, and integrations.</p>
+					<div class="cta">
+						<a class="btn btn-primary" href="/signup">Try for free</a>
+						<a class="btn btn-outline" href="#features" style="margin-left:10px">See features</a>
+					</div>
+
+					<div id="features" class="features">
+						<div class="card">
+							<strong>Quick roll call</strong>
+							<div style="color:var(--muted);margin-top:6px;font-size:14px">Mark whole classes present or absent in seconds.</div>
+						</div>
+						<div class="card">
+							<strong>Reports & exports</strong>
+							<div style="color:var(--muted);margin-top:6px;font-size:14px">Download attendance logs and generate percentage reports.</div>
+						</div>
+						<div class="card">
+							<strong>Parent notifications</strong>
+							<div style="color:var(--muted);margin-top:6px;font-size:14px">Notify guardians automatically about absences.</div>
+						</div>
+						<div class="card">
+							<strong>Secure & private</strong>
+							<div style="color:var(--muted);margin-top:6px;font-size:14px">Built with data privacy and role-based access control.</div>
+						</div>
+					</div>
+				</section>
+
+				<aside>
+					<div style="background:linear-gradient(180deg,#f8fafc,#ffffff);padding:22px;border-radius:10px;display:flex;flex-direction:column;gap:14px;align-items:center">
+						<svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;">
+							<rect width="320" height="180" rx="8" fill="#eef6ff"/>
+							<rect x="18" y="28" width="284" height="18" rx="4" fill="#fff"/>
+							<rect x="18" y="58" width="220" height="12" rx="3" fill="#fff"/>
+							<rect x="18" y="82" width="120" height="12" rx="3" fill="#fff"/>
+							<circle cx="260" cy="60" r="26" fill="#2b8cff"/>
+						</svg>
+						<div style="text-align:center;color:var(--muted)">Dashboard preview — class lists, quick actions, and attendance summaries.</div>
+					</div>
+				</aside>
+			</main>
+
+			<footer>
+				© <span id="year"></span> Attendance Tractor — Built for schools. &nbsp;•&nbsp; <a href="/privacy">Privacy</a>
+			</footer>
+		</div>
+
+		<script>
+			document.getElementById('year').textContent = new Date().getFullYear();
+		</script>
+	</body>
+</html>
+
